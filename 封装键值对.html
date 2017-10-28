@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var str = "http://www.baidu.com?id=557131028857&name=zhufeng&age=8";
+    var reg = /([^?&=]+)=([^?&=]+)/g;
+    str.match(reg);
+    var obj = {};
+    str.replace(reg,function($0,$1,$2){
+        obj[$1] = $2;
+    });
+    console.log(obj);
+</script>
